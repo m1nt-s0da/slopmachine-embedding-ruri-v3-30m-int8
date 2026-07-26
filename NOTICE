@@ -1,0 +1,16 @@
+This package includes third-party model assets.
+
+Upstream source:
+- Repository: cl-nagoya/ruri-v3-30m
+- URL: https://huggingface.co/cl-nagoya/ruri-v3-30m
+
+Included files in this distribution:
+- slopmachine/embedding/ruri_v3_30m_int8/model.onnx
+- slopmachine/embedding/ruri_v3_30m_int8/tokenizer.json
+
+Upstream license for these files:
+- Apache License, Version 2.0
+- License URL: https://www.apache.org/licenses/LICENSE-2.0
+
+These files are provided from the upstream repository above.
+Please refer to the upstream repository for license and attribution details.

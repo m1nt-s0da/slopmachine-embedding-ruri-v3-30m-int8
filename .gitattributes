@@ -1,0 +1,2 @@
+slopmachine/embedding/ruri_v3_30m_int8/model.onnx filter=lfs diff=lfs merge=lfs -text
+slopmachine/embedding/ruri_v3_30m_int8/tokenizer.json filter=lfs diff=lfs merge=lfs -text

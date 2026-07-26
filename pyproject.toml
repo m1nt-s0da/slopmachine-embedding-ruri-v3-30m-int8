@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slopmachine-embedding"
+version = "0.1.0-alpha.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dotenv>=0.9.9",
+    "onnxruntime>=1.27.0",
+    "tokenizers>=0.23.1",
+]
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["slopmachine*"]
+
+[tool.setuptools.package-data]
+"slopmachine.embedding.ruri_v3_30m_int8" = ["model.onnx", "tokenizer.json"]
+
+[dependency-groups]
+dev = [
+    "twine>=6.2.0",
+]
+

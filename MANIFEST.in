@@ -1,0 +1,1 @@
+recursive-include slopmachine/embedding/ruri_v3_30m_int8 model.onnx tokenizer.json
