@@ -21,9 +21,3 @@ include = ["slopmachine*"]
 
 [tool.setuptools.package-data]
 "slopmachine.embedding.ruri_v3_30m_int8" = ["model.onnx", "tokenizer.json"]
-
-[dependency-groups]
-dev = [
-    "twine>=6.2.0",
-]
-
