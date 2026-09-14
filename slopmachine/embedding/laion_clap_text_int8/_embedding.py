@@ -3,11 +3,12 @@ import os
 from tokenizers import Tokenizer, Encoding
 from onnxruntime import InferenceSession
 import numpy as np
+from typing import cast
 
-__all__ = ["LaionClapInt8"]
+__all__ = ["LaionClapTextInt8"]
 
 
-class LaionClapInt8(EmbeddingModel, EmbeddingModelLoader):
+class LaionClapTextInt8(EmbeddingModel, EmbeddingModelLoader):
     def __init__(
         self,
         /,
@@ -48,14 +49,7 @@ class LaionClapInt8(EmbeddingModel, EmbeddingModelLoader):
 
         onnx_inputs = {"input_ids": input_ids, "attention_mask": attention_mask}
         outputs = self.__encoder.run(None, onnx_inputs)
-        last_hidden_state = outputs[0]
-
-        sum_embeddings = np.sum(
-            last_hidden_state * np.expand_dims(attention_mask, axis=-1), axis=1
-        )
-        sum_mask = np.sum(attention_mask, axis=1, keepdims=True)
-        embeddings = sum_embeddings / sum_mask
+        embeddings = cast(np.ndarray, outputs[0])
         norm = np.linalg.norm(embeddings, axis=1, keepdims=True)
         embeddings = embeddings / norm
-
         return embeddings

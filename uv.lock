@@ -3,7 +3,7 @@ revision = 3
 requires-python = ">=3.14"
 
 [options]
-exclude-newer = "2026-09-07T14:39:57.8840492Z"
+exclude-newer = "2026-09-07T16:16:37.5665251Z"
 exclude-newer-span = "P1W"
 
 [options.exclude-newer-package]
@@ -301,7 +301,7 @@ wheels = [
 [[package]]
 name = "slopmachine-embedding-laion-clap-text-int8"
 version = "0.1.0a1"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "onnxruntime" },
     { name = "slopmachine-embedding" },
