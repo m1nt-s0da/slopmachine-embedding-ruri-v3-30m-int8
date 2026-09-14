@@ -1,0 +1,11 @@
+This distribution includes the following files derived from the
+laion/clap-htsat-fused model:
+
+  slopmachine/embedding/laion_clap_text_int8/model.onnx
+  slopmachine/embedding/laion_clap_text_int8/tokenizer.json
+
+Source:
+  https://huggingface.co/laion/clap-htsat-fused
+
+The source model is distributed under the Apache License, Version 2.0.
+Copyright and license notices for the source model remain applicable.
