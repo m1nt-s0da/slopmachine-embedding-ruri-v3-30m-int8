@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slopmachine-embedding-ruri-v3-130m-int8"
+version = "0.1.0-alpha.1"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "onnxruntime>=1.29.0",
+    "slopmachine-embedding>=0.1.0a1",
+    "tokenizers>=0.23.2",
+]
+
+[tool.setuptools]
+include-package-data = true
+packages = ["slopmachine.embedding.ruri_v3_130m_int8"]
+
+[tool.setuptools.package-data]
+"slopmachine.embedding.ruri_v3_130m_int8" = ["model.onnx", "tokenizer.json"]
+
+[tool.uv]
+exclude-newer-package = { slopmachine-embedding = false }
+
+[[tool.uv.index]]
+name = "slopmachine"
+url = "https://m1nt-s0da.github.io/slopmachine-pypi/"
